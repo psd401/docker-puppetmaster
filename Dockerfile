@@ -15,4 +15,4 @@ VOLUME ["/opt/puppet"]
 
 EXPOSE 8140
 
-ENTRYPOINT [ "/usr/bin/puppet", "master", "--no-daemonize", "--verbose" ]
+ENTRYPOINT [ "/usr/bin/puppet", "master", "--no-daemonize", "--verbose"]
