@@ -15,6 +15,10 @@ VOLUME ["/opt/puppet"]
 
 RUN cp -rf /etc/puppet/* /opt/puppet/
 
+VOLUME ["/opt/varpuppet/lib/puppet"]
+
+RUN cp -rf /var/lib/puppet/* /opt/varpuppet/lib/puppet/
+
 EXPOSE 8140
 
 ENTRYPOINT [ "/usr/bin/puppet", "master", "--no-daemonize", "--verbose" ]
