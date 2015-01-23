@@ -11,6 +11,7 @@ To use this container:
 1.	Make a data-only container first, so you can destroy the puppetmaster container without losing certs or other configuration data:  
 	`docker run -d --name puppet-data --entrypoint /bin/echo macadmins/puppetmaster Data-only container for puppetmaster`
 2. `docker run -d --name puppetmaster -h puppet -p 8140:8140 --volumes-from puppet-data macadmins/puppetmaster`
+3. **Important**: `docker exec puppetmaster cp -Rf /etc/puppet /opt/`
 3. To see list of certs: `docker exec puppetmaster puppet cert list -all`
 4. To test on a client:
 	1. Install Puppet, Hiera, Facter, and Puppet LaunchDaemon onto client
