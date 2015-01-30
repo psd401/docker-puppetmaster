@@ -2,7 +2,7 @@ FROM centos:centos6
 
 MAINTAINER nmcspadden@gmail.com
 
-ENV PUPPET_VERSION 3.7.3
+ENV PUPPET_VERSION 3.7.4
 
 RUN rpm --import https://yum.puppetlabs.com/RPM-GPG-KEY-puppetlabs && rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
 RUN yum install -y yum-utils && yum-config-manager --enable centosplus >& /dev/null
