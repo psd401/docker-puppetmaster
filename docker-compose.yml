@@ -1,0 +1,6 @@
+puppet:
+        image: psd/puppet
+        ports:
+          - 8140:8140
+        volumes:
+          - ./puppet:/opt/puppet
